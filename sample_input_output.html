@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)file:///Users/1assist/Documents/Multi-Agents/frontend/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Agent AI System</title>
+  <meta name="description" content="A multi-agent AI system where two agents collaborate to answer your questions about weather, math, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./sample_input_output_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./sample_input_output_files/style.css">
+</head>
+
+<body>
+
+  <!-- ─── Background decoration ─────────────────────────────────── -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="glow glow--1" aria-hidden="true"></div>
+  <div class="glow glow--2" aria-hidden="true"></div>
+
+  <!-- ─── Main container ────────────────────────────────────────── -->
+  <div class="app">
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header__logo">
+        <span class="header__icon">🤖</span>
+        <h1 class="header__title">Multi-Agent AI</h1>
+      </div>
+      <p class="header__subtitle">Two agents working together to answer your questions</p>
+      <div class="header__agents">
+        <span class="agent-badge agent-badge--a" id="badge-a">
+          <span class="agent-badge__dot"></span>Agent A · Orchestrator
+        </span>
+        <span class="agent-badge__arrow">⇄</span>
+        <span class="agent-badge agent-badge--b" id="badge-b">
+          <span class="agent-badge__dot"></span>Agent B · Executor
+        </span>
+      </div>
+    </header>
+
+    <!-- Chat area -->
+    <main class="chat" id="chat-area">
+      
+    <div class="bubble bubble--user">Get the current weather in New York and give me a short summary.</div><div class="bubble bubble--agent"><div class="bubble__label">Agent Pipeline</div>
+        <div class="step-card">
+          <div class="step-card__header">
+            ⚙️ Step 1: Retrieve the current weather data for New York City.
+            <span class="tag">task_1</span>
+          </div>
+          <div class="step-card__body">The current weather in New York City, NY, on Sunday, March 1, 2026, is clear with periodic clouds. The temperature is 33°F (1°C), but it feels like 27°F (-3°C). The humidity is around 75%. There is a 0% chance of rain.</div>
+        </div>
+      
+        <div class="step-card">
+          <div class="step-card__header">
+            ⚙️ Step 2: Generate a short summary of the weather data retrieved in task 1.
+            <span class="tag">task_2</span>
+          </div>
+          <div class="step-card__body">The weather in New York City on Sunday, March 1, 2026, is clear with periodic clouds. The temperature is 33°F (1°C), but it feels like 27°F (-3°C) due to 75% humidity. There is no chance of rain.</div>
+        </div>
+      
+      <div class="final-answer">
+        <div class="final-answer__title">✨ Final Answer</div>
+        The weather in New York City on Sunday, March 1, 2026, is clear with periodic clouds. The temperature is 33°F (1°C), but it feels like 27°F (-3°C) due to 75% humidity. There is no chance of rain.
+      </div>
+    </div><div class="bubble bubble--user">What are the different strategies used in building a car? Compare the costs of making one in different countries.</div><div class="bubble bubble--agent"><div class="bubble__label">Agent Pipeline</div>
+        <div class="step-card">
+          <div class="step-card__header">
+            ⚙️ Step 1: Research and identify different strategies used in building a car (e.g., lean manufacturing, mass production, modular design).
+            <span class="tag">task_1</span>
+          </div>
+          <div class="step-card__body">*   **Lean Manufacturing:** Focuses on minimizing waste and maximizing efficiency in all aspects of production.
+*   **Mass Production:** Emphasizes producing large quantities of standardized vehicles using assembly lines and specialized labor.
+*   **Modular Design:** Involves creating vehicles from independent modules or components that can be easily interchanged or customized.
+*   **Platform Sharing:** Utilizing a common underlying structure or platform for multiple vehicle models to reduce development costs and improve economies of scale.
+*   **Flexible Manufacturing:** Employs adaptable production systems that can quickly switch between different models or variants to meet changing market demands.
+
+I have identified 5 different strategies.</div>
+        </div>
+      
+        <div class="step-card">
+          <div class="step-card__header">
+            ⚙️ Step 2: Identify several countries known for car manufacturing (e.g., China, Germany, United States, Japan, Mexico).
+            <span class="tag">task_2</span>
+          </div>
+          <div class="step-card__body">*   China
+*   Germany
+*   United States
+*   Japan
+*   Mexico</div>
+        </div>
+      
+        <div class="step-card">
+          <div class="step-card__header">
+            ⚙️ Step 3: For each country identified in task_2, research the cost of building a car. Include labor costs, material costs, energy costs, and any relevant government regulations or incentives.
+            <span class="tag">task_3</span>
+          </div>
+          <div class="step-card__body">It's challenging to provide precise figures for the cost of building a car in each country due to the complexity and variability of factors involved. However, here's a breakdown of the key cost components and relevant regulations/incentives in each of the listed countries:
+
+**1. China:**
+
+*   **Labor Costs:** Relatively lower than in developed countries, but increasing. In 2025, labor costs per vehicle in China are around $597.
+*   **Material Costs:** China has a robust local supply chain, which can reduce material costs.
+*   **Energy Costs:** Possibly lower due to government support for energy production.
+*   **Government Regulations and Incentives:**
+    *   The Chinese government has offered substantial subsidies to manufacturers and buyers of New Energy Vehicles (NEVs), including EVs, PHEVs, and FCVs.
+    *   NEV purchase tax exemptions have been extended until 2027, with a gradual reduction in the exemption amount. For NEVs purchased in 2024 and 2025, the tax exemption will not exceed ¥30,000 (about $4,170) per vehicle. For NEVs purchased in 2026 and 2027, a vehicle purchase tax applies but at half the normal rate, and the tax reduction for each NEV will not exceed ¥15,000.
+    *   Local governments may offer additional incentives.
+    *   The government promotes the construction of NEV infrastructure and provides R&amp;D subsidies.
+
+**2. Germany:**
+
+*   **Labor Costs:** Among the highest in the world. The labor cost is about $3,300 per vehicle.
+*   **Material Costs:** Likely to be high due to stringent quality standards and reliance on imports for some materials.
+*   **Energy Costs:** Relatively high compared to other manufacturing hubs.
+*   **Government Regulations and Incentives:**
+    *   The German government has set a goal of having 15 million EVs on the road by 2030.
+    *   A new purchase incentive of up to €4,000 is expected to start on January 1, 2026, with strict limits on vehicle price and buyer income. Used cars are also expected to be eligible.
+    *   EVs registered by December 31, 2025, are exempt from vehicle tax for up to 10 years, but no later than December 31, 2030.
+    *   Companies purchasing BEVs between July 2024 and December 2028 can deduct up to 40% of the vehicle's value in the first year.
+    *   Germany is working to establish a comprehensive fast-charging network.
+
+**3. United States:**
+
+*   **Labor Costs:** Higher than Mexico and China, but lower than Germany. Labor costs per vehicle are around $1,341.
+*   **Material Costs:** Could be affected by tariffs on imported steel and aluminum.
+*   **Energy Costs:** Relatively moderate.
+*   **Government Regulations and Incentives:**
+    *   The Inflation Reduction Act (IRA) includes incentives for clean vehicle manufacturing and adoption.
+    *   Tax credits of up to $7,500 are available for new EV purchases, subject to certain requirements.
+    *   The Bipartisan Infrastructure Law provides funding for EV charging infrastructure.
+    *   The IRA provides tax credits for battery manufacturing and critical mineral processing.
+
+**4. Japan:**
+
+*   **Labor Costs:** Higher than China, South Korea and Mexico. The labor cost is about $769 per vehicle.
+*   **Material Costs:** Possibly higher due to reliance on imports for some materials.
+*   **Energy Costs:** Relatively high.
+*   **Government Regulations and Incentives:**
+    *   Japan has set a goal for all new passenger vehicle sales to be electrified vehicles by 2035.
+    *   The government is offering subsidies to promote the introduction of clean energy vehicles.
+    *   The government will review eco-car tax breaks and consider tightening efficiency standards for EVs and plug-in hybrids.
+    *   Tax incentives are provided for businesses investing in green transition projects, including EVs.
+
+**5. Mexico:**
+
+*   **Labor Costs:** Significantly lower than in the United States, Canada, and Europe. The labor cost per vehicle is about $305.
+*   **Material Costs:** Could be affected by tariffs on imported steel and aluminum.
+*   **Energy Costs:** Relatively moderate.
+*   **Government Regulations and Incentives:**
+    *   Mexico has free trade agreements with countries representing a large percentage of the world's GDP, allowing manufacturers to reach customers tariff-free.
+    *   There is a 25% income tax deduction for investors in the automotive sector and a 30% credit for R&amp;D projects.
+    *   Exemption from indirect taxes and tariffs for IMMEX companies.
+
+**Important Considerations:**
+
+*   **Fluctuating Costs:** Material costs, energy prices, and exchange rates can fluctuate, impacting the overall cost of production.
+*   **Technology:** The type of vehicle being manufactured (internal combustion engine, hybrid, electric) significantly impacts costs, particularly regarding battery technology and components.
+*   **Location:** Specific regions within each country may have different labor costs, utility costs, and access to infrastructure, influencing the overall cost.
+*   **Economies of Scale:** Production volume affects per-unit costs.
+*   **Tariffs and Trade Policies:** Changes in trade policies can significantly impact material costs and export competitiveness.</div>
+        </div>
+      
+        <div class="step-card">
+          <div class="step-card__header">
+            ⚙️ Step 4: Compare the costs of building a car in the different countries identified in task_2, based on the data gathered in task_3. Highlight the factors contributing to cost differences.
+            <span class="tag">task_4</span>
+          </div>
+          <div class="step-card__body">Building a car costs vary significantly across different countries due to labor, materials, energy, and government incentives.
+
+*   **Labor Costs:** Mexico has the lowest labor costs at approximately $305 per vehicle, while Germany has the highest at around $3,300. China ($597), Japan ($769), and the United States ($1,341) fall in between.
+*   **Material Costs:** Material costs fluctuate based on the supply chain, quality standards, and trade policies in each country.
+*   **Energy Costs:** Energy costs vary, with Germany and Japan having relatively high costs and China potentially having lower costs due to government support.
+*   **Government Regulations and Incentives:** Government incentives, especially for electric vehicles (EVs), can significantly offset production costs. China offers substantial subsidies and tax exemptions for NEVs. Germany provides purchase incentives and tax benefits for EVs. The United States has tax credits through the Inflation Reduction Act (IRA). Japan offers subsidies for clean energy vehicles and tax incentives for green transition projects. Mexico provides tax deductions and exemptions for investors in the automotive sector.</div>
+        </div>
+      
+        <div class="step-card">
+          <div class="step-card__header">
+            ⚙️ Step 5: Summarize the different car building strategies identified in task_1 and compare their cost implications based on the cost comparison performed in task_4.
+            <span class="tag">task_5</span>
+          </div>
+          <div class="step-card__body">Car building strategies include lean manufacturing (minimizing waste), mass production (large quantities, standardized), modular design (interchangeable components), platform sharing (common structure for multiple models), and flexible manufacturing (adaptable production systems). Cost implications vary by country due to labor, materials, energy, and government incentives. Mexico has the lowest labor costs ($305 per vehicle), while Germany has the highest ($3,300). Government incentives, especially for EVs, can significantly reduce costs.</div>
+        </div>
+      
+      <div class="final-answer">
+        <div class="final-answer__title">✨ Final Answer</div>
+        Here's a breakdown of car manufacturing strategies and cost comparisons across different countries:<br><br><strong>Car Building Strategies:</strong><br><br>*   <strong>Lean Manufacturing:</strong> Focuses on efficiency and minimizing waste.<br>*   <strong>Mass Production:</strong> Emphasizes high volumes of standardized vehicles.<br>*   <strong>Modular Design:</strong> Uses interchangeable components for customization.<br>*   <strong>Platform Sharing:</strong> Leverages a common structure for various models to cut development costs.<br>*   <strong>Flexible Manufacturing:</strong> Allows for quick adaptation to different models or variants.<br><br><strong>Cost Comparison by Country:</strong><br><br>It's difficult to give precise cost figures, but here's a comparison based on key factors:<br><br>*   <strong>China:</strong> Relatively lower labor costs (around $597 per vehicle in 2025) and a strong local supply chain. Significant government incentives for New Energy Vehicles (NEVs).<br>*   <strong>Germany:</strong> High labor costs (around $3,300 per vehicle) and stringent quality standards. Government incentives for EVs are available.<br>*   <strong>United States:</strong> Moderate labor costs (around $1,341 per vehicle). Incentives for clean vehicle manufacturing and adoption through the Inflation Reduction Act (IRA).<br>*   <strong>Japan:</strong> Moderate labor costs (around $769 per vehicle). Government subsidies for clean energy vehicles.<br>*   <strong>Mexico:</strong> Significantly lower labor costs (around $305 per vehicle). Free trade agreements and tax benefits for the automotive sector.<br><br><strong>Key Cost Factors:</strong><br><br>*   <strong>Labor Costs:</strong> Vary significantly, with Mexico having the lowest and Germany the highest.<br>*   <strong>Material Costs:</strong> Influenced by supply chains, quality standards, and trade policies.<br>*   <strong>Energy Costs:</strong> Differ depending on government support and energy sources.<br>*   <strong>Government Regulations and Incentives:</strong> Subsidies and tax breaks, particularly for EVs, can substantially impact costs.<br><br><strong>Strategy and Cost Implications:</strong><br><br>The most cost-effective strategy depends on the target market and vehicle type. For example, mass production in Mexico could be advantageous for low-cost vehicles, while flexible manufacturing in Germany might be suitable for premium models with higher customization. Government incentives can also heavily influence these decisions, making some locations more attractive for specific types of vehicles, like EVs.
+      </div>
+    </div></main>
+
+    <!-- Input bar -->
+    <footer class="input-bar" id="input-bar">
+      <div class="input-bar__inner">
+        <input type="text" id="query-input" class="input-bar__field" placeholder="Ask me anything — weather, math, summaries…" autocomplete="off">
+        <button id="send-btn" class="input-bar__send" aria-label="Send query">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+      <p class="input-bar__hint">Press <kbd>Enter</kbd> to send · Powered by Agent A (Orchestrator) + Agent B (Executor)
+      </p>
+    </footer>
+  </div>
+
+  <script src="./sample_input_output_files/app.js"></script>
+
+
+</body></html>

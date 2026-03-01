@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Agent AI System</title>
+  <meta name="description"
+    content="A multi-agent AI system where two agents collaborate to answer your questions about weather, math, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ─── Background decoration ─────────────────────────────────── -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="glow glow--1" aria-hidden="true"></div>
+  <div class="glow glow--2" aria-hidden="true"></div>
+
+  <!-- ─── Main container ────────────────────────────────────────── -->
+  <div class="app">
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header__logo">
+        <span class="header__icon">🤖</span>
+        <h1 class="header__title">Multi-Agent AI</h1>
+      </div>
+      <p class="header__subtitle">Two agents working together to answer your questions</p>
+      <div class="header__agents">
+        <span class="agent-badge agent-badge--a" id="badge-a">
+          <span class="agent-badge__dot"></span>Agent A · Orchestrator
+        </span>
+        <span class="agent-badge__arrow">⇄</span>
+        <span class="agent-badge agent-badge--b" id="badge-b">
+          <span class="agent-badge__dot"></span>Agent B · Executor
+        </span>
+      </div>
+    </header>
+
+    <!-- Chat area -->
+    <main class="chat" id="chat-area">
+      <div class="chat__welcome" id="welcome-message">
+        <div class="chat__welcome-icon">✨</div>
+        <h2>What can I help you with?</h2>
+        <p>Try one of these example queries:</p>
+        <div class="chat__suggestions" id="suggestions">
+          <button class="suggestion-chip"
+            data-query="Compare the pros and cons of Python vs JavaScript for backend development.">
+            ⚖️ Compare technologies
+          </button>
+          <button class="suggestion-chip"
+            data-query="Explain quantum computing in simple terms, then give 3 real-world applications.">
+            🔬 Explain & apply
+          </button>
+          <button class="suggestion-chip" data-query="Write a short poem about AI, then translate it to French.">
+            ✍️ Create & translate
+          </button>
+          <button class="suggestion-chip"
+            data-query="List 5 healthy breakfast ideas and estimate the calories for each.">
+            🍳 Research & analyse
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Input bar -->
+    <footer class="input-bar" id="input-bar">
+      <div class="input-bar__inner">
+        <input type="text" id="query-input" class="input-bar__field"
+          placeholder="Ask me anything — weather, math, summaries…" autocomplete="off" />
+        <button id="send-btn" class="input-bar__send" aria-label="Send query">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+      <p class="input-bar__hint">Press <kbd>Enter</kbd> to send · Powered by Agent A (Orchestrator) + Agent B (Executor)
+      </p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
